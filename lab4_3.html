@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 4-3</title>
+</head>
+<body>
+    <script>
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var arr = [];
+        for (var i = 0; i < 15; i++) {
+            arr.push(getRandomNumber(1, 100)); 
+        }
+
+        document.write("Початковий масив: " + arr.join("  ") + "<br>");
+
+        var sum = 0;
+        var count = 0;
+
+        for (var i = 0; i < arr.length; i += 2) {
+            if (arr[i] > 0) {
+                sum += arr[i];
+                count++;
+            }
+        }
+
+        var average = count > 0 ? sum / count : 0;
+
+        var B = 50;
+
+        var countLessThanB = arr.filter(function (element) {
+            return element < B;
+        }).length;
+
+        document.write("Середнє арифметичне додатних чисел на непарних місцях: " + average + "<br>");
+        document.write("Кількість чисел менше за " + B + ": " + countLessThanB + "<br>");
+    </script>
+</body>
+</html>

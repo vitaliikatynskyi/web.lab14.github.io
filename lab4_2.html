@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 4-2</title>
+</head>
+<body>
+    <script>
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var arr = [];
+        for (var i = 0; i < 15; i++) {
+            arr.push(getRandomNumber(1, 100)); 
+        }
+
+        document.write("Початковий масив: " + arr.join("  ") + "<br>");
+
+        var minElement = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if (arr[i] < minElement) {
+                minElement = arr[i];
+            }
+        }
+
+        var minElementIndex = arr.indexOf(minElement);
+
+        var sum = arr[0] + arr[arr.length - 1];
+
+        arr[minElementIndex] = sum;
+
+        document.write("Масив після заміни: " + arr.join("  ") + "<br>");
+    </script>
+</body>
+</html>
