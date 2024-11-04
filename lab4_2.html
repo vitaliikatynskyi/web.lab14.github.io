@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,7 @@
         }
 
         var arr = [];
-        for (var i = 0; i < 235; i++) {
+        for (var i = 0; i < 15; i++) {
             arr.push(getRandomNumber(1, 100)); 
         }
 
@@ -32,12 +33,12 @@
 
         document.write("Масив після заміни: " + arr.join("  ") + "<br>");
     </script>
+    <p>Максимальний елемент: <span id="maxElement"></span></p>
+    <p>Масив після заміни: <span id="modifiedArray"></span></p>
+
+    <script>
+        document.getElementById("maxElement").innerText = maxElement;
+        document.getElementById("modifiedArray").innerText = arr.join("  ");
+    </script>
 </body>
 </html>
-<p>Максимальний елемент: <span id="maxElement"></span></p>
-<p>Масив після заміни: <span id="modifiedArray"></span></p>
-
-<script>
-    document.getElementById("maxElement").innerText = maxElement;
-    document.getElementById("modifiedArray").innerText = arr.join("  ");
-</script>

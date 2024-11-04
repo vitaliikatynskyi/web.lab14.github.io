@@ -16,26 +16,20 @@
 
         document.write("Початковий масив: " + arr.join("  ") + "<br>");
 
-        var sum = 0;
-        var count = 0;
+        var a = 10; // You can change the value of a
+        var b = 50; // You can change the value of b
 
-        for (var i = 0; i < arr.length; i += 2) {
-            if (arr[i] > 0) {
-                sum += arr[i];
-                count++;
-            }
-        }
-
-        var average = count > 0 ? sum / count : 0;
-
-        var B = 50;
-
-        var countLessThanB = arr.filter(function (element) {
-            return element < B;
+        var countInRange = arr.filter(function (element) {
+            return element >= a && element <= b;
         }).length;
 
-        document.write("Середнє арифметичне додатних чисел на непарних місцях: " + average + "<br>");
-        document.write("Кількість чисел менше за " + B + ": " + countLessThanB + "<br>");
+        var sumMultiplesOfThree = 0;
+        for (var i = 2; i < arr.length; i += 3) {
+            sumMultiplesOfThree += arr[i];
+        }
+
+        document.write("Кількість чисел, що належать проміжку [" + a + "," + b + "]: " + countInRange + "<br>");
+        document.write("Сума чисел, що стоять на місцях, кратних 3: " + sumMultiplesOfThree + "<br>");
     </script>
 </body>
 </html>
