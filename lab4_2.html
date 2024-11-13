@@ -39,6 +39,12 @@
     <script>
         document.getElementById("maxElement").innerText = maxElement;
         document.getElementById("modifiedArray").innerText = arr.join("  ");
+        var button = document.createElement('button');
+        button.innerHTML = 'Назад';
+        button.onclick = function() {
+            window.location.href = 'index.html';
+        };
+        document.body.appendChild(button);
     </script>
 </body>
 </html>

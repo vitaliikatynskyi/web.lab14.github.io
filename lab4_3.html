@@ -30,6 +30,12 @@
 
         document.write("Кількість чисел, що належать проміжку [" + a + "," + b + "]: " + countInRange + "<br>");
         document.write("Сума чисел, що стоять на місцях, кратних 3: " + sumMultiplesOfThree + "<br>");
+        var button = document.createElement('button');
+        button.innerHTML = 'Назад';
+        button.onclick = function() {
+            window.location.href = 'index.html';
+        };
+        document.body.appendChild(button);
     </script>
 </body>
 </html>

@@ -42,6 +42,12 @@
             return a.length - b.length;
         });
         document.write("Масив fruits відсортований за довжиною слів: " + fruits.join(", ") + "<br>");
+        var button = document.createElement('button');
+        button.innerHTML = 'Назад';
+        button.onclick = function() {
+            window.location.href = 'index.html';
+        };
+        document.body.appendChild(button);
     </script>
 </body>
 </html>
